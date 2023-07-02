@@ -5,7 +5,7 @@ import json
 import menu
 import subprocess
 
-logs_dir = "~/Lab/Navi-0.3/stable/sapphire.exe/logs/"
+logs_dir = "./logs/"
 
 # this does the inital command preprocessing/check. I imagine I can have up to three word commands before I start bumping into serious natural language issues
 def prefix_processor(assistant, prompt):
@@ -68,7 +68,7 @@ def save(assistant, filename=None):
     print("enter filename: ",end="")
     filename = input()
   else:
-    filename=util.default_log_name
+    filename="autosave.log"
 
   with open(logs_dir+filename,"w") as json_file:
     # Print it in a nice human readable format, so we can edit it if needed
