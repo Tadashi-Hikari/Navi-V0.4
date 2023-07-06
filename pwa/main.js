@@ -5,6 +5,7 @@
 //
 
 const ort = require('onnxruntime-web');
+const vad = require("@ricky0123/vad-node")
 
 function log(i) { document.getElementById('status').innerText += `\n[${performance.now().toFixed(2)}] ` + i; }
 
@@ -26,10 +27,25 @@ let total_processing_time = 0;
 let total_processing_count = 0;
 
 // some dom shortcuts
-let record;
-let transcribe;
+let service_toggle
 let progress;
 let audio_src;
+
+// I added this function to add in VAD
+async function main() {
+    const myvad = await vad.MicVAD.new({
+      onSpeechStart: () => {
+        console.log("Speech start detected")
+        startRecord(0);
+      },
+      onSpeechEnd: (audio) => {
+        // do something with `audio` (Float32Array of audio samples at sample rate 16000)...
+        stopRecord();
+      }
+    })
+    myvad.start()
+  }
+  main()
 
 // transcribe active
 function busy() {
