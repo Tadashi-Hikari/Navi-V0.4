@@ -32,7 +32,7 @@ let progress;
 let audio_src;
 
 // I added this function to add in VAD
-async function main() {
+async function startVAD() {
     const myvad = await vad.MicVAD.new({
       onSpeechStart: () => {
         console.log("Speech start detected")
@@ -45,7 +45,6 @@ async function main() {
     })
     myvad.start()
   }
-  main()
 
 // transcribe active
 function busy() {
@@ -77,11 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
     record.addEventListener("click", (e) => {
         if (e.currentTarget.innerText == "Record") {
             e.currentTarget.innerText = "Stop Recording";
-            startRecord(0);
+            startVAD();
         }
         else {
             e.currentTarget.innerText = "Record";
-            stopRecord();
+            //stopRecord();
+            myvad.stop()
         }
     });
 
