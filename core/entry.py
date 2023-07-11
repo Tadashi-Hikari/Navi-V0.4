@@ -41,7 +41,6 @@ class Assistant:
   def retain(assistant):
     assistant.tailored_prompt_history.append(assistant.running_log[-2])
     assistant.tailored_prompt_history.append(assistant.running_log[-1])
-    print(util.COLOR_RED+"retained"+util.COLOR_RESET)
     
   def reset(self,messages=None):
     if(messages == None):
