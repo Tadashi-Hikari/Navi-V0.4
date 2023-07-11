@@ -10,10 +10,10 @@ target_filename="${formatted_date}-quicknote.md"
 target_path="${target_directory}/${target_filename}"
 
 # Copy the contents of the source file to the target file
-cp "$source_path" "$target_path"
+cp $source_path $target_path
 
 # Delete the source file
-rm "$source_path"
+rm $source_path
 
 # Create a new empty source file
-touch "$source_path"
+touch $source_path
