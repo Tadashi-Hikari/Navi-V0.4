@@ -17,10 +17,7 @@ def prefix_processor(assistant, prompt):
         exit()
     #todo: Make this print over the websocket
     elif prompt=="clear" or prompt=="c":
-        # TODO: Replace with function call
-        for i in range(15):
-            print("")
-        os.system("clear")
+        clear()
         return False
     elif prompt=="ignore" or prompt=="i":
         ignore(assistant)
@@ -54,6 +51,12 @@ def prefix_processor(assistant, prompt):
         subprocess.call(['bash'])
     else:
         return True
+    
+def clear():
+    if(os.name == "nt"):
+        os.system("cls")
+    elif(system == "posix"):
+        os.system("clear")
 
 def ignore(assistant):
     size = len(assistant.tailored_prompt_history)
