@@ -1,0 +1,6 @@
+* what's going on with this directory layout?
+** useage
+This will hold a mixture of scripts to be used depending on the 'mode' of the device. the expectation is that they hold different 'categories' of power useage designed plugins. the expectation being that mobile is the most battery friendly, server is the least battery friendly, and workstation is dependant on the task at hand
+
+** notebook
+This is a space for me to keep my thoughts as I work on the project. On my personal computer I keep a journal folder shortcut in here (for my personal journal), and misc notes and ideas. This becomes a working space for me to think about things that might not be related to what I am currently working on, but can't afford to forget (adhd)
