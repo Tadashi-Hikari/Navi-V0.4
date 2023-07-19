@@ -53,10 +53,14 @@ def prefix_processor(assistant, prompt):
         return True
     
 def clear():
-    if(os.name == "nt"):
+    system = os.name
+    if(system == "nt"):
         os.system("cls")
     elif(system == "posix"):
         os.system("clear")
+    else:
+        os.system("clear")
+        
 
 def ignore(assistant):
     size = len(assistant.tailored_prompt_history)

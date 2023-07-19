@@ -1,6 +1,15 @@
 * what's going on with this directory layout?
 ** useage
 This will hold a mixture of scripts to be used depending on the 'mode' of the device. the expectation is that they hold different 'categories' of power useage designed plugins. the expectation being that mobile is the most battery friendly, server is the least battery friendly, and workstation is dependant on the task at hand
+*** mobile/termux
+These are scripts and such for the termux environment on Android. I'll probably have an installer for these. It unlocks more functionality for a Sapphire based assistant
 
 ** notebook
 This is a space for me to keep my thoughts as I work on the project. On my personal computer I keep a journal folder shortcut in here (for my personal journal), and misc notes and ideas. This becomes a working space for me to think about things that might not be related to what I am currently working on, but can't afford to forget (adhd)
+
+** portal
+I have symbolic links to other projects in my workspace here. they're populated by my IDE. it helps me w/ my ADHD keep thoughts organized
+
+** pwa
+A progressive web app has been chosen for the point of entry to the Navi, so that it is useful with or without a device. Eventually, it should hold basic PIM functionality to mirror a mobile device, and a way of interacting with store files for a PKB.
+*** Node.js is battery efficient. it is OK to run the app through this. This could be a preferred install method

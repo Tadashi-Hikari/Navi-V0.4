@@ -1,0 +1,210 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/pwa/core/sapphire-core ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :dependencies conj '[cider/piggieback,"0.5.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.piggieback/wrap-cljs-repl"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:34887 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: Leiningen + Figwheel Main...
+;   The Calva Connection Log might have more connection progress information.
+; There are no figwheel build files (.cljs.edn) in the project directory.
+; Connection to Figwheel Main aborted.
+; Error while connecting cljs REPL: Aborted
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error macroexpanding clojure.core/ns at (core.cljs:1:1).
+; ((:require)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉sapphire-core.core꞉> 
+; Jacking in...
+; Connecting using "Leiningen + ClojureScript built-in for browser" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/pwa/core/sapphire-core ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :dependencies conj '[cider/piggieback,"0.5.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.piggieback/wrap-cljs-repl"]' -- repl :headless ; popd
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:32957 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: Leiningen + ClojureScript built-in for browser...
+;   The Calva Connection Log might have more connection progress information.
+; Syntax error macroexpanding clojure.core/ns at (core.cljs:1:1).
+; ((:require)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉sapphire-core.core꞉> 
+; Connected session: cljs
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+nil
+cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+cljs꞉cljs.user꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+This is sample text
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (ReferenceError) at (<cljs repl>:1).
+; sapphire_core is not defined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (ReferenceError) at (<cljs repl>:1).
+; sapphire_core is not defined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (ReferenceError) at (<cljs repl>:1).
+; sapphire_core is not defined
+; 
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+nil
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen + ClojureScript built-in for browser" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/pwa/core/sapphire-core ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :dependencies conj '[cider/piggieback,"0.5.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.piggieback/wrap-cljs-repl"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:44447 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: Leiningen + ClojureScript built-in for browser...
+;   The Calva Connection Log might have more connection progress information.
+; Syntax error macroexpanding clojure.core/ns at (core.cljs:1:1).
+; ((:require)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉sapphire-core.core꞉> 
+; Connected session: cljs
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+nil
+cljs꞉cljs.user꞉> 
+; Jack-in done.
+cljs꞉cljs.user꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
+(clear)
+; WARNING: Use of undeclared Var sapphire-core.core/clear at line 1 <cljs repl>
+; 
+; Execution error (ReferenceError) at (<cljs repl>:1).
+; sapphire_core is not defined
+; 
+cljs꞉sapphire-core.core꞉> 
+clear)
+
+()
+()
+cljs꞉sapphire-core.core꞉> 
+(clear)
+; WARNING: Use of undeclared Var sapphire-core.core/clear at line 1 <cljs repl>
+; 
+; Execution error (ReferenceError) at (<cljs repl>:1).
+; sapphire_core is not defined
+; 
+cljs꞉sapphire-core.core꞉> 
+(js/alert "Hello CLJS!")
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs.pprint is undefined
+; 
+cljs꞉sapphire-core.core꞉> 
