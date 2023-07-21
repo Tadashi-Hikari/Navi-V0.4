@@ -114,3 +114,39 @@ def print_to_file(assistant):
     filename = input()
     file = open(filename,"w")
     file.write(assistant.tailored_prompt_history[-1]["content"])   
+
+# Print the messages w/ line numbers
+def transcript_selection(assistant):
+    sapphire_features.show(assistant.tailored_prompt_history)
+    print("Enter lines to keep. Separate lines with comma: ",end="") 
+    lines = input()
+
+    new_tailored_prompt = []
+    
+    lines = lines.split(",")
+    for line in lines:
+        new_tailored_prompt.append(assistant.tailored_prompt_history[int(line)])
+    
+    return new_tailored_prompt
+
+# This allows me to quick switch between modes
+def switch():
+    modes = "list all available .log files, give an index next to it"
+
+def inverse_edit(assistant):
+    sapphire_features.show(assistant.tailored_prompt_history)
+
+def inverse_edit_full_log(assistant):
+    sapphire_features.show(assistant.running_log)
+
+def attach(assistant):
+    print("Enter filepath: ", end="")
+    path = input()
+
+    file = open(path,"r")
+    file_data = file.read()
+    assistant.append_data = file_data
+
+def freeze_current(assistsant):
+    assistant.running_log.append({"content" : "context switched to X"})
+    assistant.buffer_log = copy.deepcopy(assistant.tailored_prompt_history)
