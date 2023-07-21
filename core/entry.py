@@ -4,8 +4,6 @@ import asyncio
 import argparse
 import util
 import copy
-import json
-import sandbox
 import sapphire_features
 
 AUTOSAVE = "autosave.log"

@@ -1,8 +1,6 @@
 import util
 import os
-import sandbox
 import json
-import menu
 import subprocess
 
 logs_dir = "./logs/"
@@ -15,6 +13,8 @@ def prefix_processor(assistant, prompt):
         return False
     elif prompt=="exit":
         exit()
+    elif prompt=="r" or prompt=="reprint":
+        print_last_prompt(assistant)
     #todo: Make this print over the websocket
     elif prompt=="clear" or prompt=="c":
         clear()
@@ -39,7 +39,7 @@ def prefix_processor(assistant, prompt):
     elif prompt=="show unedited history":
         show(assistant.running_log)
     elif prompt=="edit":
-        new_tailored_prompt=sandbox.transcript_selection(assistant)
+        new_tailored_prompt=transcript_selection(assistant)
         assistant.reset(new_tailored_prompt)
     elif prompt=="inverse edit":
         menu.inverse_edit(assistant)
@@ -61,6 +61,8 @@ def clear():
     else:
         os.system("clear")
         
+def print_last_prompt(assistant):
+    print(util.COLOR_RED+assistant.tailored_prompt_history[-1]["content"]+util.COLOR_RESET)
 
 def ignore(assistant):
     size = len(assistant.tailored_prompt_history)
@@ -68,7 +70,8 @@ def ignore(assistant):
         assistant.tailored_prompt_history.pop()
         assistant.tailored_prompt_history.pop()
         # Print the last message so I remember what I was doing
-        print(util.COLOR_RED+assistant.tailored_prompt_history[-1]["content"]+util.COLOR_RESET)
+        print_last_prompt(assistant)
+        
     print(util.COLOR_RED+"Prompt scrubbed"+util.COLOR_RESET)
     
 # TODO: Make a custom 'save' program, that allows me to mark what type it is
@@ -117,7 +120,7 @@ def print_to_file(assistant):
 
 # Print the messages w/ line numbers
 def transcript_selection(assistant):
-    sapphire_features.show(assistant.tailored_prompt_history)
+    show(assistant.tailored_prompt_history)
     print("Enter lines to keep. Separate lines with comma: ",end="") 
     lines = input()
 
@@ -134,10 +137,10 @@ def switch():
     modes = "list all available .log files, give an index next to it"
 
 def inverse_edit(assistant):
-    sapphire_features.show(assistant.tailored_prompt_history)
+    show(assistant.tailored_prompt_history)
 
 def inverse_edit_full_log(assistant):
-    sapphire_features.show(assistant.running_log)
+    show(assistant.running_log)
 
 def attach(assistant):
     print("Enter filepath: ", end="")

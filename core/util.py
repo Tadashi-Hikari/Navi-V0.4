@@ -92,6 +92,7 @@ def print_help():
     print("(h)elp = print this help")
     print("exit = end the program")
     print("echo = print last output to a file")
+    print("(r)eprint = reprint the last response")
     print("(i)gnore = ignore last user/assistant pair")
     print("show = show retained conversation")
     print("show unedited history = show the full, unedited transcript for this session")
@@ -101,4 +102,4 @@ def print_help():
     print("init = reset assistant to default")
     print("edit = edit transcript, select lines to keep")
     print("attach = append a file for context to the asked question")
-    print("bash = drop to bash command line, then return here with "exit")
+    print("bash = drop to bash command line, then return here with \"exit\"")

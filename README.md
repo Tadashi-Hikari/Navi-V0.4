@@ -11,3 +11,6 @@ To help me with my daily programming tasks
 
 # Eventual use
 To help me manage/mitigate the negative impacts of my ADHD. To help me manage my schedule. To help me manage my personal and work projects
+
+# tips
+feature/bug: reprinting a newly initialized assistant will show the system prompt currently in use
