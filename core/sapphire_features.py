@@ -67,7 +67,9 @@ def ignore(assistant):
     if(size > 2):
         assistant.tailored_prompt_history.pop()
         assistant.tailored_prompt_history.pop()
-    print("Prompt scrubbed")
+        # Print the last message so I remember what I was doing
+        print(util.COLOR_RED+assistant.tailored_prompt_history[-1]["content"]+util.COLOR_RESET)
+    print(util.COLOR_RED+"Prompt scrubbed"+util.COLOR_RESET)
     
 # TODO: Make a custom 'save' program, that allows me to mark what type it is
 def save(assistant, filename=None): 

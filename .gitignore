@@ -1,7 +1,8 @@
 core/__pycache__
 pwa/node_modules
 pwa/package-lock.json
-pwa/core/sapphire-core/out/
+pwa/core/package-lock.json
+pwa/core/node_modules
 notebook/*
 !notebook/dev-documents
 .bashrc
