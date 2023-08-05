@@ -1,8 +1,0 @@
-Alright, so I am going to need a simple REST gateway, and I also have the ability to transfer data via URL (api), or direct transfer (websocket) if needed.
-
-the GPT plugin as I've written it is python. I really don't want to have to rewrite it, and I see no reason why I can't pass essential information back and fourth using JSON. 
-
-the state of the assistant acts a bit like a cookie, in that it can be passed from client to server.
-
-I am trying not to have to rewrite any plugins that I've considered up to this point. This way the system is as agnostic as possible
-
