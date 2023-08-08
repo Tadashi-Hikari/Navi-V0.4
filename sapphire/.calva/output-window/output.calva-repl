@@ -10,7 +10,7 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/sapphire ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:37415 ...
+; Using host:port 127.0.0.1:39785 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -26,20 +26,23 @@ clj꞉sapphire.core꞉>  ; Use `alt+enter` to evaluate
 clj꞉sapphire.core꞉> 
 ; Jack-in done.
 clj꞉sapphire.core꞉> 
-nil
+; Syntax error compiling at (gpt.clj:2:1).
+; Unable to resolve symbol: require in this context
+clj꞉sapphire.gpt꞉> 
+; Syntax error compiling at (gpt.clj:2:1).
+; Unable to resolve symbol: require in this context
 clj꞉sapphire.gpt꞉> 
 nil
 clj꞉sapphire.gpt꞉> 
 nil
 clj꞉sapphire.gpt꞉> 
-{:id "chatcmpl-7kIZeBK8r8Ec9uBBySBFuuV1kTeGE",
- :object "chat.completion",
- :created 1691268842,
- :model "gpt-3.5-turbo-0613",
- :choices
- [{:index 0,
-   :message
-   {:role "assistant", :content "The World Series in 2020 was played at Globe Life Field in Arlington, Texas."},
-   :finish_reason "stop"}],
- :usage {:prompt_tokens 53, :completion_tokens 18, :total_tokens 71}}
+nil
+clj꞉sapphire.gpt꞉> 
+#'sapphire.gpt/empty-chat
+clj꞉sapphire.gpt꞉> 
+; Execution error (ArityException) at sapphire.gpt/eval21202 (form-init16220581897672780145.clj:8).
+; Wrong number of args (1) passed to: clojure.core/get-in
+clj꞉sapphire.gpt꞉> 
+My name is Sapphire.EXE, and I am here to assist you in managing your schedule, projects, and ADHD. How can I help you today?
+nil
 clj꞉sapphire.gpt꞉> 
