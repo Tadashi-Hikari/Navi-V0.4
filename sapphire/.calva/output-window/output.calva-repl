@@ -9,8 +9,8 @@
 ; You can make Calva auto-select this.
 ;   - See https://calva.io/connect-sequences/
 ; 
-; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/sapphire ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:39785 ...
+; Starting Jack-in Terminal: pushd c:\Users\ccarroll\outpost\Navi-V0.4\sapphire & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:53762 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -26,23 +26,23 @@ clj꞉sapphire.core꞉>  ; Use `alt+enter` to evaluate
 clj꞉sapphire.core꞉> 
 ; Jack-in done.
 clj꞉sapphire.core꞉> 
-; Syntax error compiling at (gpt.clj:2:1).
-; Unable to resolve symbol: require in this context
-clj꞉sapphire.gpt꞉> 
-; Syntax error compiling at (gpt.clj:2:1).
-; Unable to resolve symbol: require in this context
-clj꞉sapphire.gpt꞉> 
-nil
-clj꞉sapphire.gpt꞉> 
 nil
 clj꞉sapphire.gpt꞉> 
 nil
 clj꞉sapphire.gpt꞉> 
 #'sapphire.gpt/empty-chat
 clj꞉sapphire.gpt꞉> 
-; Execution error (ArityException) at sapphire.gpt/eval21202 (form-init16220581897672780145.clj:8).
-; Wrong number of args (1) passed to: clojure.core/get-in
+#'sapphire.gpt/add-new-message
 clj꞉sapphire.gpt꞉> 
-My name is Sapphire.EXE, and I am here to assist you in managing your schedule, projects, and ADHD. How can I help you today?
+#'sapphire.gpt/chat-with-assistant
+clj꞉sapphire.gpt꞉> 
+; Execution error (ExceptionInfo) at hato.middleware/exceptions-response (middleware.clj:149).
+; status: 400
+clj꞉sapphire.gpt꞉> 
+#'sapphire.gpt/add-new-message
+clj꞉sapphire.gpt꞉> 
+#'sapphire.gpt/chat-with-assistant
+clj꞉sapphire.gpt꞉> 
+Since I am an AI, I don't experience emotions, but thank you for asking! How can I assist you today?
 nil
 clj꞉sapphire.gpt꞉> 

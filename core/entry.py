@@ -12,9 +12,9 @@ class Assistant:
   # Maintains a running log of ALL prompts (global/singleton)
 
   # replace w/ org key
-  openai.organization = os.getenv('AI_ORG')
+  openai.organization = os.getenv('OPENAI_ORGANIZATION')
   # replace w/ openai key
-  openai.api_key = os.getenv('AI_KEY')
+  openai.api_key = os.getenv('OPENAI_API_KEY')
 
   # These will be lists of dictionaries
   running_log = []
