@@ -7,16 +7,12 @@
   (let [new-map {:role "user" :content message}]
         (conj empty-chat new-map)))
 
+(defn quick-chat-with-assistant [message]
+  (get-in (api/create-chat-completion {:model "gpt-3.5-turbo"
+                                       :messages (add-new-message message)}) [:choices 0 :message :content]))
+
 (defn chat-with-assistant [message]
   (get-in (api/create-chat-completion {:model "gpt-3.5-turbo"
-                                                :messages (add-new-message message)})[:choices 0 :message :content]))
+                                       :messages (add-new-message message)}) [:choices 0 :message :content]))
 
-;(chat-with-assistant "How are you today?")
-
-(defn perpetual-loop []
-  (loop []
-    (let [input (read-line)]
-        (println (chat-with-assistant input))
-    (recur))))
-
-(perpetual-loop)
+(chat-with-assistant "How are you doing today?")
