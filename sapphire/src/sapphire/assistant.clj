@@ -1,9 +1,10 @@
 (ns sapphire.assistant
-  (:use [sapphire.gpt]))
+  (:require [sapphire.plugins.gpt]))
 
-;(defrecord Assistant [running-log tailored-prompt])
+(defrecord Assistant [running-log tailored-prompt])
 
-;(def assistant (->Assistant (atom empty-chat) (atom empty-chat)))
+; This should be moved to GPT Module
+(def assistant (->Assistant (atom gpt/empty-chat) (atom gpt/empty-chat)))
 
 (defn format-prompt [prompt]
   (let [new-map {:role "user" :content prompt}]
