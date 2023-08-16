@@ -1,16 +1,13 @@
 (ns sapphire.core)
-(:use
- '[sapphre.assistant :as assistant]
- '[sapphire.gpt :as gpt])
-
-(defrecord Assistant [running-log tailored-prompt])
-
-(def assistant (->Assistant (atom 'gpt/empty-chat) (atom 'gpt/empty-chat)))
+(:require
+ '[sapphire.assistant :as assistant])
+(require
+ '[sapphire.plugins.gpt :as gpt])
 
 (defn perpetual-loop []
   (loop []
     (let [input (read-line)]
-      (println ('gpt/chat-with-assistant input))
+      (println (sapphire.plugins.gpt/chat-with-assistant input))
       (recur))))
 
 (perpetual-loop)

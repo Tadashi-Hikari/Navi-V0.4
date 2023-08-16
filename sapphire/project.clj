@@ -7,4 +7,5 @@
                  [org.clojure/data.json "2.4.0"]
                  [clj-http "3.11.0"]
                  [net.clojars.wkok/openai-clojure "0.9.0"]]
+  :main sapphire.core
   :repl-options {:init-ns sapphire.core})

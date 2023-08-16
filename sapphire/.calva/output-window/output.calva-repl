@@ -10,7 +10,13 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/sapphire ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:36253 ...
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/chris/Lab/Navi-V0.4/sapphire ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:36139 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -26,125 +32,121 @@ clj꞉sapphire.core꞉>  ; Use `alt+enter` to evaluate
 clj꞉sapphire.core꞉> 
 ; Jack-in done.
 clj꞉sapphire.core꞉> 
-; Evaluating file: assistant.clj
-; Syntax error (ExceptionInfo) compiling at (gpt.clj:18:1).
-; Could not coerce value to schema: {:body {:messages (not (sequential? a-java.lang.String))}}
-; Evaluation of file assistant.clj failed: class clojure.lang.Compiler$CompilerException
+; Syntax error compiling at (core.clj:1:1).
+; Found lib name 'sapphre.assistant' containing period with prefix 'quote'.  lib names inside prefix lists must not contain periods
+clj꞉sapphire.core꞉> 
+; Syntax error (ClassNotFoundException) compiling at (assistant.clj:1:7849).
+; sapphire.gpt
+; 
+; Syntax error reading source at (REPL:2:28).
+; Unmatched delimiter: )
 clj꞉sapphire.assistant꞉> 
-; Syntax error compiling at (assistant.clj:33:1).
-; Unable to resolve symbol: quick-chat-with-assistant in this context
+; Syntax error (ClassNotFoundException) compiling at (assistant.clj:1:7849).
+; sapphire.gpt
+; 
+; Syntax error reading source at (REPL:2:28).
+; Unmatched delimiter: )
 clj꞉sapphire.assistant꞉> 
-; Evaluating file: gpt.clj
-; Syntax error (ExceptionInfo) compiling at (gpt.clj:18:1).
-; Could not coerce value to schema: {:body {:messages (not (sequential? a-java.lang.String))}}
-; Evaluation of file gpt.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉sapphire.gpt꞉> 
-; Evaluating file: gpt.clj
-; Syntax error (ExceptionInfo) compiling at (gpt.clj:18:1).
-; Could not coerce value to schema: {:body {:messages (not (sequential? a-java.lang.String))}}
-; Evaluation of file gpt.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉sapphire.gpt꞉> 
-; Syntax error compiling at (assistant.clj:33:1).
-; Unable to resolve symbol: quick-chat-with-assistant in this context
+; Syntax error reading source at (REPL:3:1).
+; EOF while reading, starting at line 2
+clj꞉user꞉> 
+; Syntax error (ClassNotFoundException) compiling at (assistant.clj:1:7849).
+; sapphire.gpt
+; 
+; Syntax error reading source at (REPL:2:28).
+; Unmatched delimiter: )
+clj꞉sapphire.assistant꞉> 
+; Execution error (FileNotFoundException) at sapphire.assistant/eval7834$loading (form-init15809713479261882020.clj:1).
+; Could not locate sapphire/gpt__init.class, sapphire/gpt.clj or sapphire/gpt.cljc on classpath.
+clj꞉sapphire.assistant꞉> 
+; Execution error (FileNotFoundException) at sapphire.assistant/eval7840$loading (form-init15809713479261882020.clj:1).
+; Could not locate sapphire/plugin/gpt__init.class, sapphire/plugin/gpt.clj or sapphire/plugin/gpt.cljc on classpath.
+clj꞉sapphire.assistant꞉> 
+nil
+clj꞉sapphire.assistant꞉> 
+nil
+clj꞉sapphire.assistant꞉> 
+; Syntax error compiling at (core.clj:1:1).
+; Found lib name 'sapphre.assistant' containing period with prefix 'quote'.  lib names inside prefix lists must not contain periods
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:1:1).
+; Found lib name 'sapphire.assistant' containing period with prefix 'quote'.  lib names inside prefix lists must not contain periods
+clj꞉sapphire.core꞉> 
+nil
+clj꞉sapphire.assistant꞉> 
+sapphire.assistant.Assistant
+clj꞉sapphire.assistant꞉> 
+; Syntax error compiling at (assistant.clj:6:29).
+; Unable to resolve symbol: empty-chat in this context
+clj꞉sapphire.assistant꞉> 
+sapphire.assistant.Assistant
+clj꞉sapphire.assistant꞉> 
+; Syntax error compiling at (core.clj:6:16).
+; Unable to resolve symbol: ->Assistant in this context
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:6:16).
+; No such namespace: ->assistant
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:6:16).
+; No such namespace: assistant
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (assistant.clj:6:29).
+; No such namespace: gpt
 clj꞉sapphire.assistant꞉> 
 nil
 clj꞉sapphire.assistant꞉> 
 sapphire.assistant.Assistant
 clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/assistant
+; Syntax error compiling at (assistant.clj:6:29).
+; No such namespace: gpt
 clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/format-prompt
-clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/format-response
-clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/log-prompt-update!
-clj꞉sapphire.assistant꞉> 
-; Syntax error compiling at (assistant.clj:20:40).
-; Unable to resolve symbol: response in this context
-clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/log-response-update!
-clj꞉sapphire.assistant꞉> 
-Current running-log:  [{:role system, :content You are a helpful assistant named Sapphire.EXE. your purpose is to help me manage my schedule, projects, and ADHD} {:role user, :content This is a test}]
-Current running-log:  [{:role system, :content You are a helpful assistant named Sapphire.EXE. your purpose is to help me manage my schedule, projects, and ADHD} {:role user, :content This is a test} {:role assistant, :content {:role assistant, :content Hello! I'm Sapphire.EXE, your helpful assistant. How can I assist you today?}}]
+; Syntax error compiling at (core.clj:1:1).
+; Found lib name 'sapphire.assistant' containing period with prefix 'quote'.  lib names inside prefix lists must not contain periods
+clj꞉sapphire.core꞉> 
+[sapphire.assistant :as assistant]
+clj꞉user꞉> 
+[sapphire.plugins.gpt :as gpt]
+clj꞉user꞉> 
+; Syntax error compiling at (core.clj:1:1).
+; Found lib name 'sapphire.assistant' containing period with prefix 'quote'.  lib names inside prefix lists must not contain periods
+clj꞉sapphire.core꞉> 
+[sapphire.plugins.gpt :as gpt]
+clj꞉sapp꞉> 
 nil
-clj꞉sapphire.assistant꞉> 
-[{:role system, :content You are a helpful assistant named Sapphire.EXE. your purpose is to help me manage my schedule, projects, and ADHD} {:role user, :content This is a test} {:role assistant, :content {:role assistant, :content Hello! I'm Sapphire.EXE, your helpful assistant. How can I assist you today?}}]
+clj꞉sapphire.core꞉> 
+[sapphire.plugins.gpt :as gpt]
+clj꞉sapphire.core꞉> 
+[sapphire.plugins.gpt :as gpt]
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:9:16).
+; No such namespace: gpt
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:9:16).
+; No such namespace: gpt
+clj꞉sapphire.core꞉> 
 nil
-clj꞉sapphire.assistant꞉> 
-; Execution error (ExceptionInfo) at schema-tools.coerce/coerce-or-error! (coerce.cljc:24).
-; Could not coerce value to schema: {:body {:messages [nil nil {:content (not (instance? java.lang.String a-clojure.lang.PersistentArrayMap))}]}}
-clj꞉sapphire.assistant꞉> 
-#'sapphire.assistant/assistant
-clj꞉sapphire.assistant꞉> 
-"Hello! I'm Sapphire.EXE, your helpful assistant. I can definitely help you manage your schedule, projects, and navigate through the challenges of ADHD. How can I assist you today?"
-clj꞉sapphire.assistant꞉> 
-"Hello! I'm Sapphire.EXE, your helpful assistant. I'm here to assist you with managing your schedule, projects, and ADHD. How can I assist you today?"
-clj꞉sapphire.assistant꞉> 
-; Evaluating file: assistant.clj
-[{:role system, :content You are a helpful assistant named Sapphire.EXE. your purpose is to help me manage my schedule, projects, and ADHD}]
-; Syntax error (ExceptionInfo) compiling at (assistant.clj:31:1).
-; Could not coerce value to schema: {:body {:messages (not (sequential? "Testing"))}}
-; Evaluation of file assistant.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉sapphire.assistant꞉> 
-; Syntax error compiling at (gpt.clj:26:1).
-; Unable to resolve symbol: perpetual-loop in this context
-clj꞉sapphire.gpt꞉> 
-#'sapphire.gpt/perpetual-loop
-clj꞉sapphire.gpt꞉> 
-; Execution error (ExceptionInfo) at schema-tools.coerce/coerce-or-error! (coerce.cljc:24).
-; Could not coerce value to schema: {:body {:messages (not (sequential? "hello. who is this"))}}
-clj꞉sapphire.gpt꞉> 
-#'sapphire.gpt/chat-with-assistant
-clj꞉sapphire.gpt꞉> 
-; Execution error (ExceptionInfo) at schema-tools.coerce/coerce-or-error! (coerce.cljc:24).
-; Could not coerce value to schema: {:body {:messages (not (sequential? a-java.lang.String))}}
-clj꞉sapphire.gpt꞉> 
+clj꞉sapphire.core꞉> 
+[sapphire.plugins.gpt :as gpt]
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:9:16).
+; No such namespace: gpt
+clj꞉sapphire.core꞉> 
+; Execution error (IllegalStateException) at sapphire.core/eval22936 (form-init15809713479261882020.clj:12).
+; Attempting to call unbound fn: #'sapphire.core/perpetual-loop
+clj꞉sapphire.core꞉> 
+; Syntax error compiling at (core.clj:9:16).
+; No such namespace: gpt
+clj꞉sapphire.core꞉> 
+#'sapphire.core/perpetual-loop
+clj꞉sapphire.core꞉> 
 Sending interrupt.; Evaluation was interrupted
-clj꞉sapphire.gpt꞉> 
+clj꞉sapphire.core꞉> 
 ; Execution error (InterruptedException) at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject/await (AbstractQueuedSynchronizer.java:1638).
 ; null
-clj꞉sapphire.gpt꞉> 
-#'sapphire.gpt/chat-with-assistant
-clj꞉sapphire.gpt꞉> 
-"As an AI, I don't have feelings, but I'm here and ready to assist you with managing your schedule, projects, and ADHD. How can I help you today?"
-clj꞉sapphire.gpt꞉> 
-nil
 clj꞉sapphire.core꞉> 
-; Syntax error compiling at (util.clj:2:1).
-; Unable to resolve symbol: require in this context
-clj꞉sapphire.util꞉> 
-nil
-clj꞉sapphire.util꞉> 
-nil
-clj꞉sapphire.util꞉> 
-#'sapphire.util/run-subprocessa
-clj꞉sapphire.util꞉> 
-[sapphire.gpt]
-clj꞉sapphire.core꞉> 
-#'sapphire.gpt/chat-with-assistant
-clj꞉sapphire.gpt꞉> 
-[sapphire.gpt]
-clj꞉sapphire.core꞉> 
-; Syntax error compiling at (core.clj:6:16).
-; Unable to resolve symbol: ->Assistant in this context
-clj꞉sapphire.core꞉> 
-sapphire.assistant.Assistant
-clj꞉sapphire.assistant꞉> 
-#'sapphire.gpt/empty-chat
-clj꞉sapphire.gpt꞉> 
-; Syntax error compiling at (core.clj:6:16).
-; Unable to resolve symbol: ->Assistant in this context
+[sapphire.plugins.gpt :as gpt]
 clj꞉sapphire.core꞉> 
 nil
 clj꞉sapphire.core꞉> 
-[sapphire.gpt]
-clj꞉sapphire.core꞉> 
-; Syntax error compiling at (core.clj:6:16).
-; Unable to resolve symbol: ->Assistant in this context
-clj꞉sapphire.core꞉> 
-sapphire.core.Assistant
-clj꞉sapphire.core꞉> 
-#'sapphire.core/assistant
-clj꞉sapphire.core꞉> 
-[sapphre.assistant :as assistant]
+nil
 clj꞉sapphire.core꞉> 

@@ -1,4 +1,4 @@
-(ns sapphire.gpt)
+(ns sapphire.plugins.gpt)
 (require '[wkok.openai-clojure.api :as api])
 
 (def empty-chat [{:role "system" :content "You are a helpful assistant named Sapphire.EXE. your purpose is to help me manage my schedule, projects, and ADHD"}])
